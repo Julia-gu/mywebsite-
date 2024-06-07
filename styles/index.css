@@ -1,0 +1,23 @@
+body {
+    background-color: pink;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    position: relative;
+    min-height: 100vh; 
+}
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.left-side {
+    flex: 1;
+    padding: 20px;
+}
+.right-side {
+    flex: 1;
+    padding: 20px;
+}

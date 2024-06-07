@@ -24,38 +24,49 @@
             text-align: center;
             color: #333;
         }
+        .slider-container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 25px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+        .slider:hover {
+            opacity: 1;
+        }
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+        }
         .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            text-align: center;
+            margin-top: 30px;
         }
         .skill {
-            width: 200px;
-            margin: 20px;
-            padding: 20px;
-            text-align: center;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            display: none;
         }
-        .skill:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-        .skill img {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 10px;
-            border-radius: 50%;
-        }
-        .skill h2 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .skill p {
-            color: #666;
+        .skill.active {
+            display: block;
         }
         .home-button {
             position: absolute;
@@ -77,54 +88,55 @@
 <body>
     <div class="container">
         <h1>My Skills</h1>
-        <div class="skills" id="skills">
+        <div class="slider-container">
+            <input type="range" min="1" max="5" value="1" class="slider" id="skillSlider">
+        </div>
+        <div class="skills">
+            <div class="skill active" id="skill1">
+                <h2>Beginner</h2>
+                <p>HTML</p>
+                <p>CSS</p>
+            </div>
+            <div class="skill" id="skill2">
+                <h2>Intermediate</h2>
+                <p>JavaScript</p>
+                <p>React</p>
+            </div>
+            <div class="skill" id="skill3">
+                <h2>Proficient</h2>
+                <p>Node.js</p>
+                <p>Express.js</p>
+            </div>
+            <div class="skill" id="skill4">
+                <h2>Advanced</h2>
+                <p>MongoDB</p>
+                <p>Python</p>
+            </div>
+            <div class="skill" id="skill5">
+                <h2>Expert</h2>
+                <p>Django</p>
+                <p>SQL</p>
+            </div>
         </div>
     </div>
 
     <a href="index.html" class="home-button">Home</a>
 
     <script>
-        const skillsData = [
-            { name: "Baking", image: "html.png", description: "Creating structured web pages" },
-            { name: "Sking", image: "css.png", description: "Styling web pages with CSS" },
-            { name: "painting", image: "javascript.png", description: "Adding interactivity to web pages" },
-            { name: "React", image: "react.png", description: "Building dynamic web applications" },
-            { name: "Node.js", image: "nodejs.png", description: "Server-side JavaScript runtime" },
-            { name: "MongoDB", image: "mongodb.png", description: "NoSQL database" }
-        ];
+        const skillSlider = document.getElementById("skillSlider");
+        const skills = document.querySelectorAll(".skill");
 
-        function createSkill(skill) {
-            const skillElement = document.createElement("div");
-            skillElement.classList.add("skill");
-
-            const imageElement = document.createElement("img");
-            imageElement.src = `images/${skill.image}`;
-            imageElement.alt = skill.name;
-
-            const titleElement = document.createElement("h2");
-            titleElement.textContent = skill.name;
-
-            const descriptionElement = document.createElement("p");
-            descriptionElement.textContent = skill.description;
-
-            skillElement.appendChild(imageElement);
-            skillElement.appendChild(titleElement);
-            skillElement.appendChild(descriptionElement);
-
-            return skillElement;
-        }
-
-        function addSkillsToPage() {
-            const skillsContainer = document.getElementById("skills");
-
-            skillsData.forEach(skill => {
-                const skillElement = createSkill(skill);
-                skillsContainer.appendChild(skillElement);
+        skillSlider.addEventListener("input", () => {
+            const value = parseInt(skillSlider.value);
+            skills.forEach(skill => {
+                const skillId = parseInt(skill.id.slice(-1));
+                if (skillId <= value) {
+                    skill.classList.add("active");
+                } else {
+                    skill.classList.remove("active");
+                }
             });
-        }
-
-        window.onload = addSkillsToPage;
+        });
     </script>
 </body>
 </html>
-
