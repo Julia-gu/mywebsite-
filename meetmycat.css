@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe6f2; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    transition: background-color 0.5s; /* Smooth transition for background color change */
+}
+
+.container {
+    max-width: 500px; /* Adjusted max-width */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Required for absolute positioning of the button */
+}
+
+h1 {
+    text-align: center;
+    color: #ff66b3; 
+    margin-top: 0;
+}
+
+.photo-gallery {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.photo-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.photo {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    z-index: 2;
+    color: #333; 
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.interactive-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff66b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.interactive-button:hover {
+    background-color: #ff3385;
+}
+
+.home-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #ff66b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #ff3385;
+}
+
