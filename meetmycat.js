@@ -13,7 +13,7 @@ function scrollSlider(n) {
 }
 
 function changeBackgroundColor() {
-    const colors = ["#ffe6f2", "#e6f2ff", "#f2ffe6", "#fff2e6"]; // Array of different background colors
-    const randomColor = colors[Math.floor(Math.random() * colors.length)]; // Select a random color from the array
-    document.body.style.backgroundColor = randomColor; // Change the background color of the body
+    const colors = ["#ffe6f2", "#e6f2ff", "#f2ffe6", "#fff2e6"]; 
+    const randomColor = colors[Math.floor(Math.random() * colors.length)]; 
+    document.body.style.backgroundColor = randomColor; 
 }

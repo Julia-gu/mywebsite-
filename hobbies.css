@@ -43,8 +43,8 @@ h1 {
 }
 
 .hobby img {
-    width: 120px; /* Increase the width */
-    height: 120px; /* Increase the height */
+    width: 120px; 
+    height: 120px; 
     margin-bottom: 10px;
     border-radius: 50%;
 }

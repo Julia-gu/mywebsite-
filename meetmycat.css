@@ -4,17 +4,17 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; 
-    transition: background-color 0.5s; /* Smooth transition for background color change */
+    transition: background-color 0.5s; 
 }
 
 .container {
-    max-width: 500px; /* Adjusted max-width */
+    max-width: 500px; 
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative; /* Required for absolute positioning of the button */
+    position: relative; 
 }
 
 h1 {
