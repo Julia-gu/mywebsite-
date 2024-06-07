@@ -1,0 +1,76 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fde0e0; /* Light pink background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s; /* Smooth transition for background color change */
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.choice {
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.choice:hover {
+    background-color: #e0e0e0;
+    border-color: #aaa;
+}
+
+.result {
+    font-size: 1.5em;
+    color: #555;
+}
+
+.restart-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    background-color: #f0f0f0;
+}
+
+.win-bg {
+    background-color: #fff8e0; /* Light yellow background for winning */
+}
