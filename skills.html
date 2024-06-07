@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2; 
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .skill {
+            width: 200px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .skill:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .skill img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+        }
+        .skill h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .skill p {
+            color: #666;
+        }
+        .home-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #333;
+            font-weight: bold;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .home-button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Skills</h1>
+        <div class="skills" id="skills">
+        </div>
+    </div>
+
+    <a href="index.html" class="home-button">Home</a>
+
+    <script>
+        const skillsData = [
+            { name: "Baking", image: "html.png", description: "Creating structured web pages" },
+            { name: "Sking", image: "css.png", description: "Styling web pages with CSS" },
+            { name: "painting", image: "javascript.png", description: "Adding interactivity to web pages" },
+            { name: "React", image: "react.png", description: "Building dynamic web applications" },
+            { name: "Node.js", image: "nodejs.png", description: "Server-side JavaScript runtime" },
+            { name: "MongoDB", image: "mongodb.png", description: "NoSQL database" }
+        ];
+
+        function createSkill(skill) {
+            const skillElement = document.createElement("div");
+            skillElement.classList.add("skill");
+
+            const imageElement = document.createElement("img");
+            imageElement.src = `images/${skill.image}`;
+            imageElement.alt = skill.name;
+
+            const titleElement = document.createElement("h2");
+            titleElement.textContent = skill.name;
+
+            const descriptionElement = document.createElement("p");
+            descriptionElement.textContent = skill.description;
+
+            skillElement.appendChild(imageElement);
+            skillElement.appendChild(titleElement);
+            skillElement.appendChild(descriptionElement);
+
+            return skillElement;
+        }
+
+        function addSkillsToPage() {
+            const skillsContainer = document.getElementById("skills");
+
+            skillsData.forEach(skill => {
+                const skillElement = createSkill(skill);
+                skillsContainer.appendChild(skillElement);
+            });
+        }
+
+        window.onload = addSkillsToPage;
+    </script>
+</body>
+</html>
+
