@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julia's Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Julia's Website</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <div class="container">
-        <div class="left-side">
-            <h1>Julia's Website</h1>
-            <h3>Hi there! Welcome to my website💗</h3>
-            <div class="photo-placeholder">
-                <img src="images/main.jpg" alt="Photo">
-            </div>
-        </div>
-        <div class="right-side">
-            <nav>
-                <a href="contact.html">Contact</a> 
-                <a href="hobbies.html">My Hobbies</a>
-                <a href="meetmycat.html">Meet My Cat</a>
-                <a href="skills.html">My Skills</a>
-                <a href="game.html">Play a fun game</a>
-            </nav>
-            <div class="personal-info">
-                <h2 class="section-title">Personal Info</h2>
-                <p><strong>Name:</strong> Julia Gu</p>
-                <p><strong>Age:</strong> 16</p>
-                <p><strong>School:</strong> <a href="https://ca01000875.schoolwires.net/redwood">Redwood High School</a></p> 
-                <p><strong>Interests:</strong> Baking</p>
-                <p><strong>Sports:</strong> Track n Field</p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="left-side">
+      <h1>Julia's Website ✨</h1>
+      <h3>Hi there! Welcome to my website 💗</h3>
+      <div class="photo-placeholder">
+        <img src="images/main.jpg" alt="Photo of Julia" />
+      </div>
     </div>
 
-    <div class="note-section">
-        <h2>Leave Me a Note</h2>
-        <form>
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email (optional)">
-            <textarea name="note" rows="4" placeholder="Your Note"></textarea>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+    <div class="right-side">
+      <nav class="nav-bar">
+        <a href="contact.html">📬 Contact</a>
+        <a href="hobbies.html">🎨 My Hobbies</a>
+        <a href="meetmycat.html">🐱 Meet My Cat</a>
+        <a href="skills.html">💡 My Skills</a>
+        <a href="game.html">🎮 Fun Game</a>
+      </nav>
 
-    <script src="script.js"></script>
+      <div class="personal-info">
+        <h2>💫 Personal Info</h2>
+        <p><strong>Name:</strong> Julia Gu</p>
+        <p><strong>Age:</strong> 16</p>
+        <p><strong>School:</strong> <a href="https://ca01000875.schoolwires.net/redwood" target="_blank">Redwood High School</a></p>
+        <p><strong>Interests:</strong> Baking</p>
+        <p><strong>Sports:</strong> Track & Field 🏃‍♀️</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note-section">
+    <h2>💌 A Cute Message for You!</h2>
+    <p id="cute-message">Click the button to get a surprise message! 🌟</p>
+    <button id="message-btn">Get Cute Message 💖</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
